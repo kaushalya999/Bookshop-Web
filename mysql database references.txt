@@ -1,0 +1,390 @@
+create table book(
+	p_code varchar(10) PRIMARY KEY,
+	p_name varchar(255) NOT NULL,
+	p_a_code varchar(10) NOT NULL,
+	p_s_code varchar(10) NOT NULL,
+	p_language varchar(25) NOT NULL,
+	p_price double(8,2) NOT NULL,
+	p_status varchar(255),
+	p_year int,  
+	p_image varchar(255),
+	p_stock int NOT NULL,
+	p_entrydate date,
+	p_description varchar(2500)
+);
+
+create table gifts(
+	p_code varchar(10) PRIMARY KEY NOT NULL,
+	p_name varchar(255) NOT NULL,
+	p_price double(8,2) NOT NULL,
+	p_image varchar(255) NOT NULL 
+);
+
+create table subject(
+	s_code varchar(10) PRIMARY KEY NOT NULL,
+	s_name varchar(255) NOT NULL
+);
+create table author(
+	a_code varchar(10) PRIMARY KEY NOT NULL,
+	a_name varchar(255) NOT NULL,
+	a_s_code varchar(10) NOT NULL
+);
+
+
+insert into book (b_code, b_name, b_a_code, b_s_code, b_language, b_price, b_status, b_year, b_image, b_stock) values
+('b1','It Starts With Us','a1','s1','English', 3900.00, 'New', 2022, 'bookstore/english/it-starts-with-us.jpg', 10);
+
+insert into book (b_code, b_name, b_a_code, b_s_code, b_language, b_price, b_status, b_year, b_image, b_stock) values
+('b2','Rich Dad Poor Dad','a2','s2','English', 2950.00, 'Featured', 1997, 'bookstore/english/rich-dad-poor-dad.jpg', 10);
+
+insert into book (b_code, b_name, b_a_code, b_s_code, b_language, b_price, b_status, b_year, b_image, b_stock) values
+('b3','PHP & MySQL in Easy Steps: Covers MySQL 8.0','a3','s3','English', 5450.00, NULL, 2018, 'bookstore/english/php-mysql-in-easy-steps.jpg', 10);
+
+insert into book (b_code, b_name, b_a_code, b_s_code, b_language, b_price, b_status, b_year, b_image, b_stock) values
+('b4','Manikkawatha','a4','s4','Sinhala', 900.00, 'Featured', 2015, 'bookstore/sinhala/manikkawatha.jpg', 10);
+
+insert into book (b_code, b_name, b_a_code, b_s_code, b_language, b_price, b_status, b_year, b_image, b_stock) values
+('b5','Kalanaya','a5','s5','Sinhala', 850.00, NULL, NULL, 'bookstore/sinhala/kalanaya.jpg', 10);
+
+insert into book (b_code, b_name, b_a_code, b_s_code, b_language, b_price, b_status, b_year, b_image, b_stock) values
+('b6','Paithan Bhavithayen Pariganaka Satahan Muladharma','a6','s3','Sinhala', 400.00, NULL, NULL, 'bookstore/sinhala/python-bavithyen.jpg', 10);
+
+insert into book (b_code, b_name, b_a_code, b_s_code, b_language, b_price, b_status, b_year, b_image, b_stock) values
+('b7','The Sasiya Story','a7','s6','Tamil', 850.00, NULL, NULL, 'bookstore/tamil/sasiya-tamil.jpg', 10);
+
+insert into book (b_code, b_name, b_a_code, b_s_code, b_language, b_price, b_status, b_year, b_image, b_stock) values
+('b8','Vekkai','a8','s4','Tamil', 2100.00, 'Featured', 2012, 'bookstore/tamil/vekkai.jpg', 10);
+
+insert into book (b_code, b_name, b_a_code, b_s_code, b_language, b_price, b_status, b_year, b_image, b_stock) values
+('b9','Warshika Warthawa 2021 - Tamil','a9','s2','Tamil', 600.00, NULL, 2021, 'bookstore/tamil/warshika-warthawa-2021.jpg', 10);
+
+insert into book (b_code, b_name, b_a_code, b_s_code, b_language, b_price, b_status, b_year, b_image, b_stock) values
+('b10','How to use Google?','a10','s3','Tamil', 517.00, NULL, NULL, 'bookstore/tamil/how-to-use-google.jpg', 10);
+
+
+
+
+
+
+
+
+
+
+insert into author (a_code, a_name, a_s_code) values
+('a1','Colleen Hoover', 's1');
+
+insert into author (a_code, a_name, a_s_code) values
+('a2','Robert T. Kiyosaki', 's2');
+
+insert into author (a_code, a_name, a_s_code) values
+('a3','Mike McGrath', 's3');
+
+insert into author (a_code, a_name, a_s_code) values
+('a4','Mahinda Prasad Masimbula', 's4');
+
+insert into author (a_code, a_name, a_s_code) values
+('a5','Nilmini Abeydheera', 's5');
+
+insert into author (a_code, a_name, a_s_code) values
+('a6','Ananda Noyel Mendis', 's3');
+
+insert into author (a_code, a_name, a_s_code) values
+('a7','Madanjeet Sindh', 's6');
+
+insert into author (a_code, a_name, a_s_code) values
+('a8','Poomani', 's4');
+
+insert into author (a_code, a_name, a_s_code) values
+('a9','Central Bank of Sri Lanka (CBSL)', 's2');
+
+insert into author (a_code, a_name, a_s_code) values
+('a10','N. Chokkan', 's3');
+
+
+
+
+
+
+insert into subject (s_code, s_name) values
+('s1','Novels');
+
+insert into subject (s_code, s_name) values
+('s2','Finance');
+
+insert into subject (s_code, s_name) values
+('s3','Computer Science');
+
+insert into subject (s_code, s_name) values
+('s4','Mathematics');
+
+insert into subject (s_code, s_name) values
+('s5','Translations');
+
+
+
+
+
+insert into gifts (g_code, g_name, g_price, g_image) values
+('gift500','Gift Voucher - 500', 500.00, 'bookstore/gifts/500.jpg');
+
+insert into gifts (g_code, g_name, g_price, g_image) values
+('gift1000','Gift Voucher - 1000', 1000.00, 'bookstore/gifts/1000.jpg');
+
+insert into gifts (g_code, g_name, g_price, g_image) values
+('gift2000','Gift Voucher - 2000',2000.00, 'bookstore/gifts/2000.jpg');
+
+insert into gifts (g_code, g_name, g_price, g_image) values
+('gift5000','Gift Voucher - 5000', 5000.00, 'bookstore/gifts/5000.jpg');
+
+
+
+
+
+
+
+insert into books (b_name, b_author, b_language, b_price, b_status, b_entrydate, b_year, b_image) values
+('The Boys From Biloxi','John Grisham','English','500.00','Featured','2022-08-31', 2014, 'Images/Books/book6.jpg');
+
+
+
+
+
+
+insert into books (b_name, b_author, b_language, b_price, b_status, b_entrydate, b_year, b_image) values
+('Atomic Habits','James Clear','English','1500.00','Featured','2022-07-25', 2015, 'Images/Books/book7.jpg');
+
+insert into books (b_name, b_author, b_language, b_price, b_status, b_entrydate, b_year, b_image) values
+('Radio`s Greatest of All Time','Rush Limbaugh','English','2700.00','Featured','2022-07-17', 2003, 'Images/Books/book8.jpg');
+
+insert into books (b_name, b_author, b_language, b_price, b_status, b_entrydate, b_year, b_image) values
+('And There Was Light','Jon Meacham','English','1800.00','Featured','2022-07-06', 2009, 'Images/Books/book9.jpg');
+
+insert into books (b_name, b_author, b_language, b_price, b_status, b_entrydate, b_year, b_image) values
+('IT Starts With Us blue','Colleen Hoover','English','900.00','Featured','2022-07-31', 2016, 'Images/Books/book10.jpg');
+
+
+
+
+
+ALTER TABLE subject ADD constraint fk_booksubjects FOREIGN KEY (s_code) REFERENCES book(p_s_code);
+ALTER TABLE author ADD constraint fk_bookauthors FOREIGN KEY (a_code) REFERENCES book(p_a_code);
+
+
+
+create table recipients(
+	r_code int PRIMARY KEY AUTO_INCREMENT,
+	r_name varchar(255) NOT NULL,
+	r_address varchar(1000) NOT NULL,
+	r_postalcode int NOT NULL,
+	r_paymentmethod varchar(25) NOT NULL,
+	r_phone varchar(255) NOT NULL,
+	r_email varchar(255),
+	r_message varchar(2500),
+	r_date date
+);
+
+alter table recipients AUTO_INCREMENT = 1000;
+
+create table orders(
+	o_code int PRIMARY KEY AUTO_INCREMENT,
+	o_p_code varchar(10) NOT NULL,
+	o_r_code int NOT NULL,
+	o_quantity int NOT NULL, 
+	CONSTRAINT fk_billing FOREIGN KEY (o_r_code) REFERENCES recipients(r_code) 
+	ON DELETE CASCADE 
+	ON UPDATE CASCADE
+);
+
+alter table orders AUTO_INCREMENT = 1;
+
+
+
+alter table orders add constraint fk_bookorders foreign key (o_p_code) references book(p_code) ON UPDATE CASCADE;
+
+alter table orders add constraint fk_giftorders foreign key (o_p_code) references gifts(p_code) ON UPDATE CASCADE;
+
+
+
+
+select table_name, constraint_name, constraint_type
+from information_schema.TABLE_CONSTRAINTS
+where table_schema = 'bookshop_db';
+
+
+
+insert into recipients (r_name, r_address, r_postalcode, r_paymethod, r_phone, r_email, r_message, r_date) values
+('$_POST[r_name]', '$_POST[r_address]', '$_POST[r_postalcode]', '$_POST[r_paymethod]', '$_POST[r_phone]', '$_POST[r_email]', '$_POST[r_message]' ,'$_POST[r_date]');
+
+
+query1 = "SELECT r_code FROM recipients";
+
+insert into orders (o_r_code, o_p_code, o_quantity) values
+('$_POST[r_name]', $o_p_code, $o_quantity);
+
+
+update book set p_description = "<ul><li>Before It Ends with Us, it started with Atlas.</li> 
+<li>Colleen Hoover tells fan favorite Atlas’s side of the story and shares what comes 
+next in this long-anticipated sequel to the glorious and touching (USA TODAY) 
+#1 New York Times bestseller It Ends with Us.</li></ul>" 
+where p_code = 'b1';
+
+
+
+
+
+update book set p_description = "<ul><li>Rich Dad Poor Dad is one of the most popular personal finance books of all time.</li>
+
+<li>It was the beginning of the personal finance revolution, inspiring millions of people worldwide to achieve their financial freedom.</li>
+
+<li>Author Robert Kiyosaki, an entrepreneurial icon and investor, challenges and equips people to take control of their financial future.</li>
+
+<li>He shares his story of growing up with two fathers – one his real father, and one his father’s best friend, his rich dad.</li></ul>"
+ where p_code = 'b2';
+
+
+
+
+
+
+update book set p_description = "<ul><li>Learn to write PHP server-side scripts and how to make MySQL database queries.</li>
+ <li>Ideal for the newcomer to PHP and MySQL technologies. Covers MySQL 8.0.</li></ul>" 
+where p_code = 'b3';
+
+
+
+update book set p_description = "<ul><li>Manikkawatha, which was selected as one of the five best novels at the 2015 
+Swarna Pusthaka Awards, and it's a fictional novel by Mahinda Prasad Masimbula.</li>
+
+<li>The story begins with the question of how people can survive on this earth, and how beautifully people 
+eventually move away from nature after the early colonists.</li></ul>" 
+where p_code = 'b4';
+
+
+
+update book set p_description = 'Manikkawatha, which was selected as one of the five best novels at the 2015 Swarna Pusthaka Awards, and it's a fictional novel by Mahinda Prasad Masimbula.
+<br>
+The story begins with the question of how people can survive on this earth, and how beautifully people eventually move away from nature after the early colonists.' 
+where p_code = 'b4';
+
+
+
+update book set p_description = "<ul><li>This book covers the Calculus section of A-Level Combined Mathematics.</li></ul>" 
+where p_code = 'b5';
+
+
+update book set p_description = '<ul><li>This book covers the fundamentals of computer programming using python in Sinhala.</li></ul>' 
+where p_code = 'b6';
+
+
+
+update book set p_description = "<ul><li>Regional cooperation is the theme of this 
+Madanjeet Singh book, The Sasia Story.</li> <li>It is closely interwoven with 
+UNESCO's programmes, principles and ideals and his search for common cultural 
+and economic denominators to foster and strengthen cooperative initiatives in 
+South Asia.</li> <li>It is also the riveting and poignant story of a young man's activism 
+and fervour and the trauma he suffered in the aftermath of India's partition and 
+the fratricidal conflict between India and Pakistan.</li></ul>" 
+where p_code = 'b7';
+
+
+
+
+update book set p_description = "<ul><li>Tamil writer Poomani's novel Vekkai traces the aftermath 
+of 15-year-old Chidambaram's murder of a local landowner, Vadakkuraan.</li><li> Rather than 
+hide his crime from his family, Chidambaram admits to it.</li><li> Although Chidambaram's 
+family isn't supportive of his actions, they seem to understand his reasons.</li></ul>" 
+where p_code = 'b8';
+
+
+
+
+update book set p_description = "" 
+where p_code = 'b9';
+
+
+update book set p_description = "<ul><li>Google Payanpaduthuvathu Eppadi (Tamil Edition)</li></ul>" 
+where p_code = 'b10';
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+insert into book (p_code, p_name, p_a_code, p_s_code, p_language, p_price, p_status, p_year, p_image, p_stock, p_entrydate) values
+('b11','Diary Of Wimpy Kid','a11','s1','English', 2700.00, 'Movie Based', 2022, 'bookstore/english/Diary-Of-Wimpy-Kid.jpg', 10, '2022-12-08');
+
+insert into author (a_code, a_name, a_s_code) values
+('a11','Jeff Kinney', 's1');
+
+
+
+insert into book (p_code, p_name, p_a_code, p_s_code, p_language, p_price, p_status, p_year, p_image, p_stock, p_entrydate) values
+('b12','A Book Of Days','a12','s1','English', 1550.00, 'Movie Based', 2022, 'bookstore/english/A-Book-Of-Days.jpg', 10, '2022-12-01');
+
+insert into author (a_code, a_name, a_s_code) values
+('a12','Patti Smith', 's1');
+
+
+
+insert into book (p_code, p_name, p_a_code, p_s_code, p_language, p_price, p_status, p_year, p_image, p_stock, p_entrydate) values
+('b13','Cat Kid Comic Club:Graphic Novel','a13','s6','English', 2500.00, NULL, 2022, 'bookstore/english/Cat-Kid-Comic-Club-Graphic-Novel.jpg', 10, '2022-09-29');
+
+insert into author (a_code, a_name, a_s_code) values
+('a13','Dav Pilkey', 's6');
+
+insert into subject (s_code, s_name) values
+('s6','Comics');
+
+
+
+insert into book (p_code, p_name, p_a_code, p_s_code, p_language, p_price, p_status, p_year, p_image, p_stock, p_entrydate) values
+('b14','Wings Of Fire: A Graphical Novel','a14','s6','English', 1750.00, NULL, 2022, 'bookstore/english/Wings-Of-Fire-A-Graphical-Novel.jpg', 10, '2022-09-27');
+
+insert into author (a_code, a_name, a_s_code) values
+('a14','Tui T.Sutherland', 's6');
+
+
+
+insert into book (p_code, p_name, p_a_code, p_s_code, p_language, p_price, p_status, p_year, p_image, p_stock, p_entrydate) values
+('b15','The Light We Carry','a15','s7','English', 5500.00, 'Featured', 2022, 'bookstore/english/The-Light-We-Carry.jpg', 10, '2022-11-15');
+
+insert into author (a_code, a_name, a_s_code) values
+('a15','Michelle Obama', 's7');
+
+insert into subject (s_code, s_name) values
+('s7','Autobiography');
+
+
+
+
+insert into book (p_code, p_name, p_a_code, p_s_code, p_language, p_price, p_status, p_year, p_image, p_stock, p_entrydate) values
+('b16','Smitten Kitchen Keepers','a16','s8','English', 2600.00, 'Featured', 2022, 'bookstore/english/Smitten-Kitchen-keepers.jpg', 10, '2022-11-15');
+
+insert into author (a_code, a_name, a_s_code) values
+('a16','Deb Perelman', 's8');
+
+insert into subject (s_code, s_name) values
+('s8','Cooking & Recipies');
+
+
+
+insert into book (p_code, p_name, p_a_code, p_s_code, p_language, p_price, p_status, p_year, p_image, p_stock, p_entrydate) values
+('b17','Dad Jokes: 2020 Stocking Stuffers For Men','a17','s1','English', 1400.00, 'Featured', 2020, 'bookstore/english/Dad-Jokes.jpg', 10, '2022-04-01');
+
+insert into author (a_code, a_name, a_s_code) values
+('a17','Bill Mardack', 's1');
+
+
+
+
+insert into book (p_code, p_name, p_a_code, p_s_code, p_language, p_price, p_status, p_year, p_image, p_stock, p_entrydate) values
+('b18','So Help Me god','a18','s7','English', 1750.00, NULL, 2022, 'bookstore/english/So-Help-Me-god.jpg', 10, '2022-06-11');
+
+insert into author (a_code, a_name, a_s_code) values
+('a18','Mike Pence', 's7');
+
+
+
+
+
+
+
+
